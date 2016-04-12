@@ -6,8 +6,8 @@ Ce code groupe les imports entre parenthèses en un import unique et factorisé.
 
 Vous pouvez également écrire plusieurs déclarations d'importation, comme :
 
-import "fmt"
-import "math"
+    import "fmt"
+    import "math"
 
 Mais on préfèrera utiliser la déclaration d'importation factorisée.
 
