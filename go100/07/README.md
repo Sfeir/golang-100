@@ -11,7 +11,3 @@ Les constantes ne peuvent pas être déclarées en utilisant la syntaxe := .
 Les constantes numériques sont des valeurs de haute précision.
 
 Une constante non typée prend le type requis par son contexte.
-
-Essayez aussi d'imprimer needInt(Big).
-
-(Un int peut stocker au maximum un entier de 64 bits et parfois moins.)
