@@ -3,7 +3,7 @@ package main
 import "fmt"
 
 //syracuse prend en paramètre un entier et un nombre max d'itérations à effectuer.
-//Elle retourne un booléen indiquant si le nombre 1 a été atteind, suivi du nombre d'itérations qui ont été effectuées.
+//Elle retourne un booléen indiquant si le nombre 1 a été atteint, suivi du nombre d'itérations qui ont été effectuées.
 func syracuse(start int, maxIterations int) (bool, int) {
 	//cas start < 1
 	if start < 1 {
