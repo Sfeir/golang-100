@@ -1,17 +1,29 @@
 package main
 
-import (
-	"fmt"
-)
+import "fmt"
 
-type MyFloat float64
+type Vertex struct {
+	X, Y float64
+}
 
-func (pf *MyFloat) IsPositive() bool {
-	return pf != nil && *pf >= 0
+func (v *Vertex) Scale(f float64) {
+	v.X = v.X * f
+	v.Y = v.Y * f
+}
+
+func ScaleFunc(v *Vertex, f float64) {
+	v.X = v.X * f
+	v.Y = v.Y * f
 }
 
 func main() {
-	var p *MyFloat = nil
-	ok := p.IsPositive()
-	fmt.Println(ok)
+	v := Vertex{3, 4}
+	v.Scale(2)
+	ScaleFunc(&v, 10)
+
+	p := &Vertex{4, 3}
+	p.Scale(3)
+	ScaleFunc(p, 8)
+
+	fmt.Println(v, p)
 }
