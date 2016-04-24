@@ -3,7 +3,7 @@ package main
 import "fmt"
 
 //TODO: écrire une fonction qui prend en paramètre un entier et un nombre max d'itérations à effectuer, et qui effectue l'algorithme de
-//la conjoncture de Syracuse.
+//la conjoncture de Syracuse (voir README.md).
 //Elle devra retourner un booléen indiquant si le nombre 1 a été atteint, suivi du nombre d'itérations qui ont été effectuées.
 
 func main() {
