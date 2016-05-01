@@ -2,16 +2,16 @@ package main
 
 import "fmt"
 
-//indexOf prend en paramètre une chaine recherchée et un tableau de chaines,
-//et retourne l'indice de la chaine recherchée dans le tableau, ou -1 si elle n'a pas été trouvée.
+//indexOf prend en paramètre une chaine recherchée et un slice de chaines,
+//et retourne l'indice de la chaine recherchée dans le slice, ou -1 si elle n'a pas été trouvée.
 func indexOf(search string, s []string) int {
 	return -1
 }
 
-//split prend en paramètre une chaine recherchée et un slice de chaines,
+//split prend en paramètre un délimiteur et un slice de chaines,
 //et retourne un slice de slice.
-//Ex: split([]string{"|", "B", "|", "C", "D", "E", "|", "F", "|"}) = [[B] [C D E] [F]]
-func split(search string, s []string) [][]string {
+//Ex: split("|", []string{"|", "B", "|", "C", "D", "E", "|", "F", "|"}) = [[B] [C D E] [F]]
+func split(delimiteur string, s []string) [][]string {
 	return nil
 }
 
