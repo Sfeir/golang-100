@@ -2,13 +2,13 @@ package main
 
 import "fmt"
 
-// fibonacci qui retourne une fonction qui retourne un entier.
-func fibonacci() func() int {
+func multiplicateurPar(x int) func(int) int {
+	// TODO: implémenter cette fonction
 }
 
 func main() {
-	f := fibonacci()
+	mult := multiplicateurPar(2)
 	for i := 0; i < 10; i++ {
-		fmt.Println(f())
+		fmt.Println(mult(i))
 	}
 }

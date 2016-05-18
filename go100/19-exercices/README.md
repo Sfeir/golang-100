@@ -1,3 +1,3 @@
-#Exercice : closure Fibonacci
+#Exercice : closure
 
-Mettre en œuvre une fonction Fibonacci qui renvoie une fonction (une closure) qui renvoie la suite de Fibonacci (0, 1, 1, 2, 3, 5, ...).
+Implémentez la fonction multiplicateurPar pour qu'elle retourne une fonction qui multiplie son argument par un nombre donné.

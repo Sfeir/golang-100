@@ -1,11 +1,7 @@
-#Fonctions variadiques
+#Déclarations et assignations multiples
 
-Une fonction variadique accepte un nombre variable de paramètres.
-Le type de l’argument dont le nombre varie est précédé par …
-Cela ne peut concerner que le dernier argument de la fonction, qui sera un slice à l'intérieur de la fonction.
+En Go, il est possible de déclarer ou d'assigner plusieurs variables sur une seule ligne.
 
-    func fonction(b ...string) {
-        fmt.Printf("%v, type is %T", b, b)
-    }
+C'est très pratique pour effectuer un swap :
 
-    fonction("a", "b", "c", "hello") // [a b c hello], type is []string
+    x, y = y, x

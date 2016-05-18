@@ -4,13 +4,17 @@ import (
 	"fmt"
 )
 
-func fonction(prefix string, b ...string) {
-	fmt.Printf("b est égale à %v et est du type %T\n", b, b)
-	for _, v := range b {
-		fmt.Printf("%s%s\n", prefix, v)
+func fibonacci(iter int) int {
+	n, prev := 1, 0
+	for i := 0; i < iter; i++ {
+		n, prev = n+prev, n
 	}
+	return n
 }
 
 func main() {
-	fonction(">>> ", "a", "b", "c", "hello")
+	age, nom, enVie := 30, "John", true
+	fmt.Println(age, nom, enVie)
+
+	fmt.Println(fibonacci(20))
 }

@@ -2,22 +2,15 @@ package main
 
 import "fmt"
 
-// fibonacci qui retourne une fonction (plus précisément, une closure) qui retourne un entier.
-func fibonacci() func() int {
-	prev, n := 0, 1
-	return func() int {
-		// le code ci-dessous est équivalent à:
-		// oldN = n
-		// n = prev + n
-		// prev = oldN
-		prev, n = n, prev+n
-		return n
+func multiplicateurPar(x int) func(int) int {
+	return func(y int) int {
+		return x * y
 	}
 }
 
 func main() {
-	f := fibonacci()
+	mult := multiplicateurPar(2)
 	for i := 0; i < 10; i++ {
-		fmt.Println(f())
+		fmt.Println(mult(i))
 	}
 }
