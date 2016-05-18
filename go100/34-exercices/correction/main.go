@@ -2,21 +2,37 @@ package main
 
 import (
 	"fmt"
+	"net/http"
+	"time"
 )
 
-func fibonacci(n int, c chan int) {
-	x, y := 0, 1
-	for i := 0; i < n; i++ {
-		c <- x
-		x, y = y, x+y
+const url = "https://www.google.fr/search?q=golang"
+
+func curl(c chan string) {
+	resp, err := http.Get(url)
+	if err == nil {
+		c <- resp.Status
+	} else {
+		c <- "Error"
 	}
-	close(c)
 }
 
 func main() {
-	c := make(chan int)
-	go fibonacci(10, c)
-	for i := range c {
-		fmt.Println(i)
+	defer trackTimeElapsed(time.Now())
+
+	c := make(chan string)
+
+	const reqCount = 20
+	for i := 0; i < reqCount; i++ {
+		go curl(c)
 	}
+	for i := 0; i < reqCount; i++ {
+		result := <-c
+		fmt.Printf(url+" responded with HTTP status %s\n", result)
+	}
+}
+
+func trackTimeElapsed(start time.Time) {
+	elapsed := time.Since(start)
+	fmt.Printf("Done in %s\n", elapsed)
 }

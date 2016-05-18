@@ -2,12 +2,12 @@ package main
 
 import "fmt"
 
-type Person struct {
+type person struct {
 	Firstname string
 	Lastname  string
 }
 
-func (p *Person) Designation() string {
+func (p *person) fullname() string {
 	if p == nil {
 		return "Anonyme"
 	}
@@ -15,6 +15,8 @@ func (p *Person) Designation() string {
 }
 
 func main() {
-	person := Person{"Jack", "Sparo"}
-	fmt.Println(person.Designation())
+	jack := &person{"Jack", "Sparo"}
+	fmt.Println(jack.fullname())
+	jack = nil
+	fmt.Println(jack.fullname())
 }

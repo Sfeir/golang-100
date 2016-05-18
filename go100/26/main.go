@@ -2,43 +2,24 @@ package main
 
 import "fmt"
 
-type I interface {
+type MonInterface interface {
 	M()
 }
 
-type T struct {
+type MaStructure struct {
 	S string
 }
 
-func (t *T) M() {
-	if t == nil {
-		fmt.Println("M() says: <nil>")
-		return
-	}
-	fmt.Println("M() says: " + t.S)
+// Le type *MaStructure implémente I
+func (t *MaStructure) M() {
+	fmt.Println(t.S)
 }
 
 func main() {
-	var i I
-
-	fmt.Println("Cas 1 :")
-	i = &T{"hello"}
-	describe(i)
-	i.M()
-
-	fmt.Println("\nCas 2 :")
-	var t *T
-	// ici, t = nil
-	i = t
-	describe(i)
-	i.M()
-
-	fmt.Println("\nCas 3 :")
-	i = nil
-	describe(i)
-	i.M() // panic!
+	t := MaStructure{"hello"}
+	maFonction(t) // erreur de compilation : le type MaStructure n'implémente pas MonInterface.
 }
 
-func describe(i I) {
-	fmt.Printf("(%v, %T)\n", i, i)
+func maFonction(param MonInterface) {
+	fmt.Printf("(%v, %T)\n", param, param)
 }

@@ -1,28 +1,44 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"net/http"
+	"time"
+)
 
-func fibonacci(c, quit chan int) {
-	x, y := 0, 1
-	for {
-		select {
-		case c <- x:
-			x, y = y, x+y
-		case <-quit:
-			fmt.Println("quit")
-			return
-		}
+const url = "https://www.google.fr/search?q=golang"
+
+func curl(c chan string, cerr chan error) {
+	resp, err := http.Get(url)
+	if err == nil {
+		c <- resp.Status
+	} else {
+		cerr <- err
 	}
 }
 
 func main() {
-	c := make(chan int)
-	quit := make(chan int)
-	go func() {
-		for i := 0; i < 10; i++ {
-			fmt.Println(<-c)
+	defer trackTimeElapsed(time.Now())
+
+	c := make(chan string)
+	cerr := make(chan error)
+
+	const reqCount = 100
+	for i := 0; i < reqCount; i++ {
+		go curl(c, cerr)
+	}
+
+	for i := 0; i < reqCount; i++ {
+		select {
+		case result := <-c:
+			fmt.Printf(url+" responded with HTTP status %s\n", result)
+		case err := <-cerr:
+			fmt.Printf(url+" ERROR: %s\n", err)
 		}
-		quit <- 0
-	}()
-	fibonacci(c, quit)
+	}
+}
+
+func trackTimeElapsed(start time.Time) {
+	elapsed := time.Since(start)
+	fmt.Printf("Done in %s\n", elapsed)
 }

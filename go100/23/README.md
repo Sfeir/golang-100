@@ -1,4 +1,4 @@
-#Nil n'est pas null
+#Récepteur nil
 
 Si une méthode est appelée via un pointeur ayant la valeur nil, la méthode sera appelée avec un récepteur nil.
 

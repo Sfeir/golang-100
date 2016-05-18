@@ -2,30 +2,47 @@ package main
 
 import "fmt"
 
-type I interface {
-	M()
+// Aigle est une structure représentant un aigle
+type Aigle struct{}
+
+func (a Aigle) Mange() {
+	fmt.Println("L'aigle mange.")
+}
+func (a Aigle) Vole() {
+	fmt.Println("L'aigle vole.")
 }
 
-type T struct {
-	S string
+// A380 est une structure représentant un Airbus A380
+type A380 struct{}
+
+func (a A380) Vole() {
+	fmt.Println("L'A380 vole.")
 }
 
-// Le type T implémente I (au choix)
-func (t T) M() {
-	fmt.Println(t.S)
+// Oiseau est une interface qui définit le comportement d'un oiseau qui mange et vole.
+type Oiseau interface {
+	Mange()
+	Vole()
 }
 
-// Le type *T implémente I (au choix)
-func (t *T) M() {
-	fmt.Println(t.S)
+// Avion est une interface qui définit le comportement d'un avion qui vole.
+type Avion interface {
+	Vole()
 }
 
 func main() {
-	// Si le type T implémente I, on peut faire
-	var i I = T{"hello"}
-	i.M()
+	// Aigle implémente bien l'interface Oiseau
+	var oiseau Oiseau = Aigle{}
 
-	// Mais si le type *T implémente I, on peut faire
-	var i I = &T{"hello"}
-	i.M()
+	// A380 implémente bien l'interface Avion
+	var avion Avion = A380{}
+
+	oiseau.Vole()
+	oiseau.Mange()
+	avion.Vole()
+
+	// Aigle implémente aussi l'interface Avion
+	avion = Aigle{}
+
+	avion.Vole()
 }
