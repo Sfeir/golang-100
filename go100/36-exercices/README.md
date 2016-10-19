@@ -1,6 +1,3 @@
-#Exercice: Fibonacci avec goroutine et select
+#Exercice: Requêtes HTTP avec goroutine et select
 
-Modifiez la fonction fibonacci de l'exercice précédent pour qu'elle envoie les valeurs sur le channel c jusqu'à ce qu'elle reçoive
-un signal d'arrêt.
-
-Vous devrez utiliser le select.
+Modifiez le programme pour que les erreurs soient envoyées sur un canal spécifique (chan error) et récupérées via un select dans la fonction main.

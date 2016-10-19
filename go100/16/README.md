@@ -44,11 +44,11 @@ La valeur nulle d'un slice est nil.
 Un slice nil possède une longueur et une capacité de zéro.
 
 ##Ajout d'éléments à un slice
-Il est courant d'ajouter de nouveaux éléments à un slice, et ainsi Go offre une fonction intégrée append. La documentation du paquet intégré décrit append.
+Il est courant d'ajouter de nouveaux éléments à un slice, et ainsi Go offre une fonction intégrée append. La documentation décrit append comme ceci :
 
     func append(s []T, vs ...T) []T
 Le premier paramètre s de append est un slice de type T, et le reste sont des valeurs T à ajouter au slice.
 
-La valeur résultante de append est un slice contenant tous les éléments du slice original et les valeurs fournis.
+La valeur résultante de append est un slice contenant tous les éléments du slice original et les valeurs fournies.
 
-Si le tableau de support de s est trop petit pour contenir toutes les valeurs données un plus gros tableau sera alloué. Le slice retourné pointera vers le tableau nouvellement alloué.
+Si le tableau de support de s est trop petit pour contenir toutes les valeurs données, un plus gros tableau sera alloué. Le slice retourné pointera vers le tableau nouvellement alloué.

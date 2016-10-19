@@ -1,6 +1,6 @@
 #Switch
 
-Le switch est très classique :
+Le switch s'écrit comme cela :
 
     switch expression {
     case a:
@@ -11,7 +11,7 @@ Le switch est très classique :
         ...
     }
 
-Un cas est terminé automatiquement, sauf s'il fini par une déclaration fallthrough.
+Un cas ("case") est terminé automatiquement, sauf s'il finit par une déclaration fallthrough.
 
 Le switch évalue les cas de haut en bas, en s'arrêtant quand un cas correspond.
 

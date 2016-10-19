@@ -67,6 +67,7 @@ func main() {
 	assert("Q8", john.age == 20, false)
 	assert("Q8", bob.age == 20, true)
 
+	bob.friend = &bob
 	pFriend := bob.friend
 	bob.friend.friend = &john
 

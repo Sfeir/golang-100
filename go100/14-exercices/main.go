@@ -13,7 +13,7 @@ func main() {
 
 	john := Person{"John", 25, nil}
 	pJohn := &john
-	pJohn.age++
+	pJohn.age++ // en Go, l'indirection via le pointeur est transparente. Cela signifie que cette ligne de code est équivalente à (*pJohn).age++
 
 	//Indiquez true ou false en troisème argument
 	assert("Q1", john.age == 25, REPLACEME)
@@ -69,6 +69,7 @@ func main() {
 	assert("Q8", john.age == 20, REPLACEME)
 	assert("Q8", bob.age == 20, REPLACEME)
 
+	bob.friend = &bob
 	pFriend := bob.friend
 	bob.friend.friend = &john
 
