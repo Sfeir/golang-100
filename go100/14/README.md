@@ -1,4 +1,4 @@
-#Pointeurs
+# Pointeurs
 Go comporte des pointeurs explicites. Un pointeur contient l'adresse mémoire d'une variable.
 
 Le type *T est un pointeur vers une valeur de T. Sa valeur zéro est nil.

@@ -1,4 +1,4 @@
-#Méthodes
+# Méthodes
 Go ne dispose pas des classes. Cependant, vous pouvez définir des méthodes sur les types.
 
 Une méthode est une fonction avec un argument de récepteur spécial.
@@ -31,7 +31,7 @@ Vous ne pouvez pas déclarer une méthode avec un récepteur dont le type est d�
         return float64(f)
     }
     
-##Récepteurs de Pointeur
+## Récepteurs de Pointeur
 Vous pouvez déclarer des méthodes avec des récepteurs de pointeur.
 
 Cela signifie que le type de récepteur a la syntaxe littérale *T pour un certain type T. (Aussi, T ne peut pas être lui-même un pointeur comme *int.)

@@ -1,4 +1,4 @@
-#Canaux (Channels)
+# Canaux (Channels)
 Les canaux sont des conduits typés à travers lesquels vous pouvez envoyer et recevoir des valeurs avec l'opérateur de canal, <-.
 
     ch <- v    // Envoyer v sur le canal ch.

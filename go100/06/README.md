@@ -1,4 +1,4 @@
-#Les types de base
+# Les types de base
 Les types de base de Go sont
 
     bool
@@ -20,7 +20,7 @@ L'exemple montre des variables de plusieurs types, et aussi que les déclaration
 
 Les types int, uint et uintptr sont généralement d'une largeur de 32 bits sur les systèmes 32 bits et 64 bits de large sur les systèmes 64 bits. Lorsque vous avez besoin d'une valeur entière vous devez utiliser int sauf si vous avez une raison particulière d'utiliser un type entier de taille définie ou non signé.
 
-##Les valeurs zéro
+## Les valeurs zéro
 Les variables déclarées sans valeur initiale explicite reçoivent leur valeur zéro.
 
 La valeur zéro est :
@@ -29,7 +29,7 @@ La valeur zéro est :
 - False pour le type booléen, et
 - "" (La chaîne vide) pour les chaînes.
 
-##Les conversions de type
+## Les conversions de type
 L'expression T(v) convertit la valeur v au type T.
 
 Quelques conversions numériques :

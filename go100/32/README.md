@@ -1,4 +1,4 @@
-#Les channels avec buffer
+# Les channels avec buffer
 Les channels peuvent être bufferisées. Il suffit d'indiquer la longueur du buffer en second argument de make pour initialiser un canal avec buffer :
 
     ch := make(chan int, 100)

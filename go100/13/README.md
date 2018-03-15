@@ -1,4 +1,4 @@
-#Structures
+# Structures
 
 Une struct est une collection de champs. Les champs de la structure sont accessibles à l'aide d'un point.
 

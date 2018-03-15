@@ -1,4 +1,4 @@
-#L'interface vide
+# L'interface vide
 Le type d'interface qui ne spécifie aucune méthode est connu comme l'interface vide :
 
     interface{}

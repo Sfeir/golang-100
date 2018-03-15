@@ -1,4 +1,4 @@
-#Exercice : les méthodes et le récepteur nil
+# Exercice : les méthodes et le récepteur nil
 
 Créez un type "person" qui contiendra le prénom et le nom d'une personne.
 

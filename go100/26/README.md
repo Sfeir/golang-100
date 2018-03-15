@@ -1,4 +1,4 @@
-#Attention à ne pas confondre T et *T
+# Attention à ne pas confondre T et *T
 
 En général, toutes les méthodes sur un type donné T doivent avoir soit un récepteur de valeur (T) soit un récepteur de pointeur (*T), mais pas un mélange des deux.
 

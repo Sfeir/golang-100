@@ -1,4 +1,4 @@
-#if
+# if
 
 En Go, la déclaration if s'écrit :
 

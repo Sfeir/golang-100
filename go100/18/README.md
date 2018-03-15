@@ -1,4 +1,4 @@
-#Maps
+# Maps
 
 Une map associe clés et valeurs.
 
@@ -15,7 +15,7 @@ Les littéraux de maps sont comme des littéraux de struct, mais les clés sont 
         },
     }
 
-##Manipulations de maps
+## Manipulations de maps
 
 Insérer ou mettre à jour un élément de map m :
 

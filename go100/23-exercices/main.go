@@ -8,7 +8,7 @@ import "fmt"
 //La méthode devra gérer le cas où la personne est nil.
 
 func main() {
-	jack := &person{"Jack", "Sparo"}
+	jack := &person{"Jack", "Sparrow"}
 	fmt.Println(jack.fullname())
 	jack = nil
 	fmt.Println(jack.fullname())

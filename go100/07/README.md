@@ -1,4 +1,4 @@
-#Les constantes
+# Les constantes
 
 Les constantes sont déclarées comme des variables, mais avec le mot-clé const.
 

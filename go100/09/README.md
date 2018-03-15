@@ -1,4 +1,4 @@
-#La boucle for
+# La boucle for
 Go a une seule structure de boucle, la boucle for.
 
 La boucle de base for a trois composantes séparées par des points-virgules:

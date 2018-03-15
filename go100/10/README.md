@@ -1,4 +1,4 @@
-#Switch
+# Switch
 
 Le switch s'écrit comme cela :
 

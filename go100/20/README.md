@@ -1,4 +1,4 @@
-#Déclarations et assignations multiples
+# Déclarations et assignations multiples
 
 En Go, il est possible de déclarer ou d'assigner plusieurs variables sur une seule ligne.
 

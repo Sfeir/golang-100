@@ -16,7 +16,7 @@ type Speed float64
 
 func computeSpeed(d Distance, t Time) (Speed, error) {
 	if t == 0 {
-		return 0, errors.New("Impossible de calculer une vitesse sur un temps nul.")
+		return 0, errors.New("impossible de calculer une vitesse sur un temps nul")
 	}
 	return Speed(float64(d) / float64(t)), nil
 }

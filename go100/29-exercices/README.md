@@ -1,4 +1,4 @@
-#Exercice : les interfaces
+# Exercice : les interfaces
 
 Créer un type FmtLogger qui implémente Logger
 

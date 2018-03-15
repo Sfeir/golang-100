@@ -1,4 +1,4 @@
-#Tableaux (Arrays)
+# Tableaux (Arrays)
 
 Le type [n]T est un tableau de n valeurs de type T.
 

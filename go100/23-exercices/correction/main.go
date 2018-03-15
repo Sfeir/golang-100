@@ -15,7 +15,7 @@ func (p *person) fullname() string {
 }
 
 func main() {
-	jack := &person{"Jack", "Sparo"}
+	jack := &person{"Jack", "Sparrow"}
 	fmt.Println(jack.fullname())
 	jack = nil
 	fmt.Println(jack.fullname())

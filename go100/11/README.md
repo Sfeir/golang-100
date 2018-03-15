@@ -1,4 +1,4 @@
-#Defer
+# Defer
 
 Une déclaration "defer" reporte l'exécution d'une fonction jusqu'à ce que la fonction environnante retourne.
 

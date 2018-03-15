@@ -1,4 +1,4 @@
-#Assertions de type
+# Assertions de type
 Un assertions de type donne accès à la valeur sous-jacente concrète d'une valeur d'interface.
 
     t := i.(T)

@@ -1,4 +1,4 @@
-#Exercice : Syracuse
+# Exercice : Syracuse
 
 Implémentez l'algorithme de la conjecture de Syracuse :
 

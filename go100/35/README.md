@@ -1,4 +1,4 @@
-#Select
+# Select
 
 La déclaration select permet à une goroutine d'attendre sur plusieurs opérations de communication simultanément.
 

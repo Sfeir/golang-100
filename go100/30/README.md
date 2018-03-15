@@ -1,4 +1,4 @@
-#Goroutines
+# Goroutines
 Une goroutine est un processus léger géré par le « Go runtime ».
 
     go f(x, y, z)

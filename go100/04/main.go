@@ -24,7 +24,7 @@ func diff(a, b int) int {
 //divide is just a dummy function that divides a by b. It returns an error if b is zero.
 func divide(a, b int) (int, error) {
 	if b == 0 {
-		return 0, errors.New("Cannot divide by zero")
+		return 0, errors.New("cannot divide by zero")
 	}
 	return a / b, nil
 }
@@ -32,7 +32,7 @@ func divide(a, b int) (int, error) {
 //divide2 does exactly the same thing than divide but returned values are named here.
 func divide2(a, b int) (result int, err error) {
 	if b == 0 {
-		err = errors.New("Cannot divide by zero")
+		err = errors.New("cannot divide by zero")
 		return
 	}
 	result = a / b

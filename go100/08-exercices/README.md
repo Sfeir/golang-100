@@ -1,4 +1,4 @@
-#Exercice
+# Exercice
 
 Ecrivez une fonction retournant l'inverse d'un nombre décimal donné en paramètre.
 
