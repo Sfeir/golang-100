@@ -6,7 +6,7 @@ Les constantes peuvent être un caractère, une chaîne, un booléen, ou des val
 
 Les constantes ne peuvent pas être déclarées en utilisant la syntaxe := .
 
-##Constantes numériques
+## Constantes numériques
 
 Les constantes numériques sont des valeurs de haute précision.
 
