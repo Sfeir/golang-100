@@ -2,6 +2,22 @@ package main
 
 import "fmt"
 
+func realSyracuse(val, currentItern, maxIter int) (bool, int) {
+	if val == 1 {
+		return true, currentItern
+	} else if currentItern >= maxIter {
+		return false, currentItern
+	} else if val % 2 == 0 {
+		return realSyracuse(val / 2, currentItern+1, maxIter)
+	} else {
+		return realSyracuse(3*val + 1, currentItern+1, maxIter)
+	}
+}
+
+func recursiveSyracuse(val, nbMaxIteration int) (bool, int) {
+	return realSyracuse(val, 0, nbMaxIteration)
+}
+
 //syracuse prend en paramètre un entier et un nombre max d'itérations à effectuer.
 //Elle retourne un booléen indiquant si le nombre 1 a été atteint, suivi du nombre d'itérations qui ont été effectuées.
 func syracuse(start int, maxIterations int) (bool, int) {
