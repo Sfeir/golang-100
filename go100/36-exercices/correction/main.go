@@ -23,7 +23,7 @@ func main() {
 	c := make(chan string)
 	cerr := make(chan error)
 
-	const reqCount = 100
+	const reqCount = 10
 	for i := 0; i < reqCount; i++ {
 		go curl(c, cerr)
 	}
